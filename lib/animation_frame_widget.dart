@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AnimationFrameWidget extends StatelessWidget {
@@ -5,20 +6,19 @@ class AnimationFrameWidget extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fade Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return CupertinoPageScaffold(
+      // theme: ThemeData(brightness: Brightness.dark),
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Fade Demo'),
       ),
-      home: MyFadeTest(title: 'Fade Demo'),
+      child: SafeArea(child: MyFadeTest()),
+      //actions: [IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved)]
     );
   }
 }
 
 class MyFadeTest extends StatefulWidget {
-  MyFadeTest({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  MyFadeTest({Key? key}) : super(key: key);
 
   @override
   _MyFadeTest createState() => _MyFadeTest();
@@ -39,9 +39,6 @@ class _MyFadeTest extends State<MyFadeTest> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
           child: Container(
               child: FadeTransition(

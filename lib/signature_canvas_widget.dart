@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignatureCanvasWidget extends StatefulWidget {
@@ -7,20 +8,28 @@ class SignatureCanvasWidget extends StatefulWidget {
 class SignatureState extends State<SignatureCanvasWidget> {
   List<Offset?> _points = <Offset>[];
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onPanUpdate: (DragUpdateDetails details) {
-        setState(() {
-          RenderBox referenceBox = context.findRenderObject()! as RenderBox;
-          Offset localPosition =
-              referenceBox.globalToLocal(details.globalPosition);
-          _points = List.from(_points)..add(localPosition);
-        });
-      },
-      onPanEnd: (DragEndDetails details) => _points.add(null),
-      child: CustomPaint(
-        painter: SignaturePainter(_points),
-        size: Size.infinite,
+    return CupertinoPageScaffold(
+      // theme: ThemeData(brightness: Brightness.dark),
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Signature Canvas'),
       ),
+      child: SafeArea(
+          child: GestureDetector(
+        onPanUpdate: (DragUpdateDetails details) {
+          setState(() {
+            RenderBox referenceBox = context.findRenderObject()! as RenderBox;
+            Offset localPosition =
+                referenceBox.globalToLocal(details.globalPosition);
+            _points = List.from(_points)..add(localPosition);
+          });
+        },
+        onPanEnd: (DragEndDetails details) => _points.add(null),
+        child: CustomPaint(
+          painter: SignaturePainter(_points),
+          size: Size.infinite,
+        ),
+      )),
+      //actions: [IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved)]
     );
   }
 }
@@ -39,5 +48,6 @@ class SignaturePainter extends CustomPainter {
     }
   }
 
+  @override
   bool shouldRepaint(SignaturePainter other) => other.points != points;
 }

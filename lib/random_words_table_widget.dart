@@ -1,21 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 class RandomWordsTableWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Startup Name Generator (title)',
-        theme: ThemeData(
-            //fontFamily: 'Arial',
-            textTheme: const TextTheme(
-              headline1: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
-              headline6: TextStyle(fontSize: 22.0, fontStyle: FontStyle.italic),
-              bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-            ),
-            brightness: Brightness.dark,
-            primaryColor: Colors.red),
-        home: RandomWords());
+    return CupertinoPageScaffold(
+      // theme: ThemeData(brightness: Brightness.dark),
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Random Words'),
+      ),
+      child: SafeArea(child: RandomWords()),
+      //actions: [IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved)]
+    );
   }
 }
 
@@ -30,11 +27,7 @@ class _RandomWordsState extends State<RandomWords> {
   final _biggerFont = const TextStyle(fontSize: 18);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('Startup Name Generator'), actions: [
-          IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved)
-        ]),
-        body: _buildSuggestions());
+    return Scaffold(body: _buildSuggestions());
   }
 
   void _pushSaved() {
