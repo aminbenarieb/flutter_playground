@@ -7,7 +7,7 @@ class CounterButtonWidget extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return const CupertinoPageScaffold(
       // theme: ThemeData(brightness: Brightness.dark),
       navigationBar: CupertinoNavigationBar(
         middle: Text('Counter Button'),

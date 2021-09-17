@@ -2,12 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppWidgetsListWidget extends StatelessWidget {
-  final _widgetNamesToRoutes = <String, String>{
-    "Signature canvas": "signature_canvas_widget",
-    "Animation frame": "animation_frame_widget",
-    "Counter button": "counter_button_widget",
-    "Random Words": "random_words_table_widget"
-  };
+  final _widgetNamesToRoutes;
+
+  AppWidgetsListWidget(this._widgetNamesToRoutes);
 
   @override
   Widget build(BuildContext context) {
