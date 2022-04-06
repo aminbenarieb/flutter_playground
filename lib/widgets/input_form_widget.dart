@@ -61,9 +61,13 @@ class _InputFormState extends State<InputForm> {
               showDialog(
                 context: context,
                 builder: (context) {
-                  return AlertDialog(
-                    // Retrieve the text the user has typed in using our
-                    // TextEditingController
+                  return CupertinoAlertDialog(
+                    actions: [
+                      CupertinoDialogAction(
+                          child: Text("OK"),
+                          isDefaultAction: true,
+                          onPressed: () {})
+                    ],
                     content: Text(myController.text),
                   );
                 },

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/cupertino.dart';
-import 'random_words_table_widget.dart';
-import 'counter_button_widget.dart';
-import 'animation_frame_widget.dart';
-import 'signature_canvas_widget.dart';
-import 'app_widgets_list_widget.dart';
-import 'json_data_list_widget.dart';
-import 'input_form_widget.dart';
+import 'widgets/random_words_table_widget.dart';
+import 'widgets/counter_button_widget.dart';
+import 'widgets/animation_frame_widget.dart';
+import 'widgets/signature_canvas_widget.dart';
+import 'widgets/app_widgets_list_widget.dart';
+import 'widgets/json_data_list_widget.dart';
+import 'package:flutter_playground/widgets/input_form_widget.dart';
 
 void main() {
   runApp(MaterialApp(

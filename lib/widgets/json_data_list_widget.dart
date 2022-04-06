@@ -50,7 +50,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
   }
 
   getProgressDialog() {
-    return Center(child: CircularProgressIndicator());
+    return Center(child: CupertinoActivityIndicator());
   }
 
   @override
