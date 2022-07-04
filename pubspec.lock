@@ -203,6 +203,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  json_to_model:
+    dependency: "direct main"
+    description:
+      name: json_to_model
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.8+beta"
   lints:
     dependency: transitive
     description:
@@ -210,6 +217,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   matcher:
     dependency: transitive
     description:
@@ -287,6 +301,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  quiver:
+    dependency: "direct main"
+    description:
+      name: quiver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   shared_preferences:
     dependency: transitive
     description:
@@ -418,6 +439,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0+1"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.1"
 sdks:
   dart: ">=2.15.0 <3.0.0"
   flutter: ">=2.8.0"
