@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_playground/some-feature/screens/some_feature_screen.dart';
 import 'widgets/random_words_table_widget.dart';
 import 'widgets/counter_button_widget.dart';
 import 'widgets/animation_frame_widget.dart';
@@ -23,6 +24,7 @@ void main() {
           "Json data list ": "json_data_list_widget",
           "Input Form Widget": "input_list_widget",
           "Dialog Widget": "dialog_widget",
+          "Some feature": "some_feature",
         })),
         delegates: [
           GlobalMaterialLocalizations.delegate,
@@ -40,6 +42,7 @@ void main() {
       '/json_data_list_widget': (BuildContext context) => JsonDataListWidget(),
       '/input_list_widget': (BuildContext context) => InputFormWidget(),
       '/dialog_widget': (BuildContext context) => DialogWidget(),
+      '/some_feature': (BuildContext context) => SomeFeatureScreenWidget(),
     },
   ));
 }

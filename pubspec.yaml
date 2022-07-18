@@ -38,6 +38,12 @@ dependencies:
   easy_localization: ^3.0.0
   json_to_model: ^3.1.8+beta
   quiver: ^3.1.0
+  equatable: ^2.0.3
+  date_time_picker: "^2.1.0"
+
+  flutter_bloc: ^8.0.0
+  bloc_concurrency: ^0.2.0
+  stream_transform: ^2.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
